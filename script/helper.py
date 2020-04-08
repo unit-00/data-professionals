@@ -47,7 +47,36 @@ def samps_chi2(nl, pl, al):
     n = nl.value_counts().sort_index()
     p = pl.value_counts().sort_index()
     a = al.value_counts().sort_index()
-    table = np.array([n, p, a])
+    
+    n_index = n.index
+    p_index = p.index
+    a_index = a.index
+    
+    all_index = set(n_index) | set(p_index) | set(a_index)
+
+    new_n = []
+    new_p = []
+    new_a = []
+    
+    for i in all_index:
+        
+        if i not in n_index:
+            new_n.append(0)
+        else:
+            new_n.append(n[i])
+            
+        if i not in p_index:
+            new_p.append(0)
+        else:
+            new_p.append(p[i])
+            
+        if i not in a_index:
+            new_a.append(0)
+        else:
+            new_a.append(a[i])
+        
+        
+    table = np.array([new_n, new_p, new_a])
     chi, p, dof, expected = stats.chi2_contingency(table)
 
     return p
