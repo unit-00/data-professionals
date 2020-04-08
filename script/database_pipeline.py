@@ -1,5 +1,6 @@
 import io
-class Pipeline:
+class SqlPipeline:
+    
     def __init__(self, engine):
         self.engine = engine
         self.conn = self.engine.raw_connection()
@@ -17,8 +18,22 @@ class Pipeline:
 
         
 
-    
-#             self.conn.close()
-#         self.engine.dispose()
+    def close(self):
+        self.conn.close()
+        self.engine.dispose()
 
 # Unused for now
+
+class MongoPipeline:
+    
+    def __init__(self, client, db, coll):
+        self.client = client
+        self.db = client[db]
+        self.collection = self.db[coll]
+        
+    def add_one(self, doc):
+        self.collection.insert_one(doc)
+    
+    def close(self):
+        self.client.close()
+        
