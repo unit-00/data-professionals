@@ -18,10 +18,10 @@ def plot_cat(ax, x, df, xlabel='', ylabel='', title='', **options):
     ax.tick_params(axis='both', which='major', labelsize=15)
     ax.set_title(title, fontsize=15)
     
-def plot_kde(ax, nl, pl, al, xlabel='', ylabel='', title='', **options):
-    sns.kdeplot(nl, label='Not Looking', shade=True)
-    sns.kdeplot(pl, label='Passively Looking', shade=True)
-    sns.kdeplot(al, label='Actively Looking', shade=True)
+def plot_kde(ax, nl, pl=[], al=[], nl_label='Not Looking', pl_label='Passively Looking', al_label='Actively Looking', xlabel='', ylabel='', title='', **options):
+    sns.kdeplot(nl, label=nl_label, shade=True)
+    sns.kdeplot(pl, label=pl_label, shade=True)
+    sns.kdeplot(al, label=al_label, shade=True)
     
     ax.set_xlabel(xlabel, fontsize=15)
     ax.set_ylabel(ylabel, fontsize=15)
@@ -81,53 +81,62 @@ def samps_chi2(nl, pl, al):
 
     return p
 
-states_dict = {'Utah': 'UT',
- 'Texas': 'TX',
- 'Massachusetts': 'MA',
- 'Ohio': 'OH',
- 'North Carolina': 'NC',
- 'Kansas': 'KS',
- 'Kentucky': 'KY',
- 'Nebraska': 'NE',
- 'Tennessee': 'TN',
- 'Florida': 'FL',
- 'Montana': 'MT',
- 'Illinois': 'IL',
- 'Pennsylvania': 'PA',
- 'Idaho': 'ID',
- 'Michigan': 'MI',
- 'Indiana': 'IN',
- 'California': 'CA',
- 'Missouri': 'MO',
- 'Colorado': 'CO',
- 'Virginia': 'VA',
- 'Louisiana': 'LA',
- 'South Carolina': 'SC',
- 'Georgia': 'GA',
- 'Minnesota': 'MN',
- 'New Jersey': 'NJ',
- 'Washington': 'WA',
- 'Connecticut': 'CT',
- 'Oregon': 'OR',
- 'Nevada': 'NV',
- 'Wisconsin': 'WI',
- 'Arizona': 'AZ',
- 'New York': 'NY',
- 'District of Columbia': 'DC',
- 'Oklahoma': 'OK',
- 'New Hampshire': 'NH',
- 'Mississippi': 'MS',
- 'Maine': 'ME',
- 'Maryland': 'MD',
- 'Alabama': 'AL',
- 'Iowa': 'IA',
- 'Vermont': 'VT',
- 'New Mexico': 'NM',
- 'Arkansas': 'AR',
- 'Alaska': 'AK',
- 'Hawaii': 'HI',
- 'West Virginia': 'WV',
- 'North Dakota': 'ND',
- 'Rhode Island': 'RI',
- 'South Dakota': 'SD',
- 'Wyoming': 'WY'}
+def outliers_removed(series):
+    q3 = series.quantile(.75)
+    q1 = series.quantile(.25)
+    
+    iqr = q3 - q1
+    mask = ((series < (q3 + 1.5 * iqr)) & (series > (q1 - 1.5 * iqr)))
+    
+    return series[mask]
+
+# states_dict = {'Utah': 'UT',
+#  'Texas': 'TX',
+#  'Massachusetts': 'MA',
+#  'Ohio': 'OH',
+#  'North Carolina': 'NC',
+#  'Kansas': 'KS',
+#  'Kentucky': 'KY',
+#  'Nebraska': 'NE',
+#  'Tennessee': 'TN',
+#  'Florida': 'FL',
+#  'Montana': 'MT',
+#  'Illinois': 'IL',
+#  'Pennsylvania': 'PA',
+#  'Idaho': 'ID',
+#  'Michigan': 'MI',
+#  'Indiana': 'IN',
+#  'California': 'CA',
+#  'Missouri': 'MO',
+#  'Colorado': 'CO',
+#  'Virginia': 'VA',
+#  'Louisiana': 'LA',
+#  'South Carolina': 'SC',
+#  'Georgia': 'GA',
+#  'Minnesota': 'MN',
+#  'New Jersey': 'NJ',
+#  'Washington': 'WA',
+#  'Connecticut': 'CT',
+#  'Oregon': 'OR',
+#  'Nevada': 'NV',
+#  'Wisconsin': 'WI',
+#  'Arizona': 'AZ',
+#  'New York': 'NY',
+#  'District of Columbia': 'DC',
+#  'Oklahoma': 'OK',
+#  'New Hampshire': 'NH',
+#  'Mississippi': 'MS',
+#  'Maine': 'ME',
+#  'Maryland': 'MD',
+#  'Alabama': 'AL',
+#  'Iowa': 'IA',
+#  'Vermont': 'VT',
+#  'New Mexico': 'NM',
+#  'Arkansas': 'AR',
+#  'Alaska': 'AK',
+#  'Hawaii': 'HI',
+#  'West Virginia': 'WV',
+#  'North Dakota': 'ND',
+#  'Rhode Island': 'RI',
+#  'South Dakota': 'SD',
+#  'Wyoming': 'WY'}
