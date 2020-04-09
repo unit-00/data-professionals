@@ -16,8 +16,6 @@ class SqlPipeline:
         self.conn.commit()
         
 
-        
-
     def close(self):
         self.conn.close()
         self.engine.dispose()

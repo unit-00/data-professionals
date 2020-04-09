@@ -39,6 +39,7 @@ def fetch_zipcode_ci(pc):
         try:
             r = requests.get(url + l)
             links[l] = r.content
+# Terrible practice for muting exceptions so I can focus on scraping
         except:
             print('Error has occurred')
             print(i)
