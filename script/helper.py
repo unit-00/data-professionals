@@ -67,7 +67,7 @@ def plot_power(ax, s1, s2, xlabel='', ylabel='', title='', **options):
     sns.lineplot(x, alt.pdf(x), label='alt')
     ax.vlines(x=null.ppf(0.975), ymin=0, ymax=0.5, color='#000000', linestyle='--', label='alpha', zorder=1)
 
-    ax.fill_between(x, alt.pdf(x), where=(x >= null.ppf(0.97)), color="red", alpha=0.25)
+    ax.fill_between(x, alt.pdf(x), where=(x >= null.ppf(0.975)), color="red", alpha=0.25)
 
 
 
