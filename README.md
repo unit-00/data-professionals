@@ -55,48 +55,48 @@ To deal with these values, I have removed the outliers and transform the error v
 ---
 Distribution of salary, not adjusted for outliers.
 
-![Salary distribution, not adjusted](https://www.github.com/unit-00/data-professional/images/salary_not_adj_eda.png)
+![Salary distribution, not adjusted](https://www.github.com/unit-00/data-professional/blob/master/images/salary_not_adj_eda.png)
 
 There's a heavy right tail skew, furthermore I don't think they are a good representation of the population.
 
 Distribution of salary, adjusted.
 
-![Salary distribution, adjusted](https://www.github.com/unit-00/data-professional/images/salary_adj_eda.png)
+![Salary distribution, adjusted](https://github.com/unit-00/data-professionals/blob/master/images/salary_adj_eda.png)
 
 #### For the rest of the analysis, the data will be referring to salary without outliers.
 
 ### Top 5 States
 ---
-![State Salary](https://www.github.com/unit-00/data-professional/images/salary_states_eda.png)
+![State Salary](https://www.github.com/unit-00/data-professional/blob/master/images/salary_states_eda.png)
 
 ### Education
 ---
-![Education Salary](https://www.github.com/unit-00/data-professional/images/salary_edu_eda.png)
+![Education Salary](https://www.github.com/unit-00/data-professional/blob/master/images/salary_edu_eda.png)
 
 
 ### Years With Database
 ---
-![Year Database Salary](https://www.github.com/unit-00/data-professional/images/salary_yrdb_eda.png)
+![Year Database Salary](https://www.github.com/unit-00/data-professional/blob/master/images/salary_yrdb_eda.png)
 
 ### Years With This Type of Job
 ---
-![Year Job Salary](https://www.github.com/unit-00/data-professional/images/salary_yrjb_eda.png)
+![Year Job Salary](https://www.github.com/unit-00/data-professional/blob/master/images/salary_yrjb_eda.png)
 
 ### Hours of Working Per Week
 ---
-![Hours of Working Salary](https://www.github.com/unit-00/data-professional/images/salary_hours_eda.png)
+![Hours of Working Salary](https://www.github.com/unit-00/data-professional/blob/master/images/salary_hours_eda.png)
 
 ### Other People On Your Team
 ---
-![Salary With People On Your Team](https://www.github.com/unit-00/data-professional/images/salary_opoyt_eda.png)
+![Salary With People On Your Team](https://www.github.com/unit-00/data-professional/blob/master/images/salary_opoyt_eda.png)
 
 ### Gender
 ---
-![Salary Gender](https://www.github.com/unit-00/data-professional/images/salary_gender_eda.png)
+![Salary Gender](https://www.github.com/unit-00/data-professional/blob/master/images/salary_gender_eda.png)
 
 ### Top Database 
 ---
-![Salary Database](https://www.github.com/unit-00/data-professional/images/salary_db_eda.png)
+![Salary Database](https://www.github.com/unit-00/data-professional/blob/master/images/salary_db_eda.png)
 
 
 ## Testing
