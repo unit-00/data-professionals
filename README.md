@@ -80,6 +80,7 @@ Distribution of salary, adjusted.
 ---
 ![Education Salary](https://github.com/unit-00/data-professionals/blob/master/images/salary_edu_eda.png)
 
+The black lines in these bar plots refer to 95% confidence interval of the mean.
 
 ### Years With Database
 ---
@@ -178,7 +179,9 @@ It's interesting that under Bayesian approach, the sample mean of `Passively Loo
 In regards to other two tests, it does seem to be that `Not Looking` has a greater sample mean than `Passively Looking` and `Actively Looking`.
 
 ## Conclusion
-There seems to be a difference in means between `Not Looking` and `Looking` in general. In regards to a hypothetical situation trying to lower turnover rates, it would be fair to investigate farther into whether investment into employees for long term is worthwhile.
+There seems to be a difference in means between `Not Looking` and `Looking` in general. In regards to a hypothetical situation trying to lower turnover rates, it would be fair to investigate farther into whether investment into employees for long term would be better compared to new hires. 
+
+Last, but not least, I have a lot to learn from whoever is making $92.27 annual salary work for them.
 
 ## Follow up
 Couple next step would be to 
