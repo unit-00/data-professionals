@@ -19,9 +19,9 @@ def plot_cat(ax, x, df, xlabel='', ylabel='', title='', **options):
     ax.set_title(title, fontsize=15)
     
 def plot_kde(ax, nl, pl=[], al=[], nl_label='Not Looking', pl_label='Passively Looking', al_label='Actively Looking', xlabel='', ylabel='', title='', **options):
-    sns.kdeplot(nl, label=nl_label, shade=True)
-    sns.kdeplot(pl, label=pl_label, shade=True)
-    sns.kdeplot(al, label=al_label, shade=True)
+    sns.kdeplot(nl, ax=ax, label=nl_label, shade=True)
+    sns.kdeplot(pl, ax=ax, label=pl_label, shade=True)
+    sns.kdeplot(al, ax=ax, label=al_label, shade=True)
     
     ax.set_xlabel(xlabel, fontsize=15)
     ax.set_ylabel(ylabel, fontsize=15)
