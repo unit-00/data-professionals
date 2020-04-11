@@ -8,6 +8,10 @@ Min Tan
 - [Dataset](https://github.com/unit-00/data-professionals#dataset)
 - [Exploration](https://github.com/unit-00/data-professionals#exploration)
 - [Testing](https://github.com/unit-00/data-professionals#testing)
+    - [Welch's Test](https://github.com/unit-00/data-professionals#welchs-test)
+    - [Power Analysis](https://github.com/unit-00/data-professionals#power-analysis)
+    - [MannWhitneyU Test](https://github.com/unit-00/data-professionals#mannwhitneyu-test)
+    - [Bayesian Test](https://github.com/unit-00/data-professionals#bayesian-test)
 - [Conclusion](https://github.com/unit-00/data-professionals#conclusion)
 - [Follow Up](https://github.com/unit-00/data-professionals#follow-up)
 
