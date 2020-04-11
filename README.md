@@ -67,36 +67,36 @@ Distribution of salary, adjusted.
 
 ### Top 5 States
 ---
-![State Salary](https://github.com/unit-00/data-professional/blob/master/images/salary_states_eda.png)
+![State Salary](https://github.com/unit-00/data-professionals/blob/master/images/salary_states_eda.png)
 
 ### Education
 ---
-![Education Salary](https://github.com/unit-00/data-professional/blob/master/images/salary_edu_eda.png)
+![Education Salary](https://github.com/unit-00/data-professionals/blob/master/images/salary_edu_eda.png)
 
 
 ### Years With Database
 ---
-![Year Database Salary](https://github.com/unit-00/data-professional/blob/master/images/salary_yrdb_eda.png)
+![Year Database Salary](https://github.com/unit-00/data-professionals/blob/master/images/salary_yrdb_eda.png)
 
 ### Years With This Type of Job
 ---
-![Year Job Salary](https://github.com/unit-00/data-professional/blob/master/images/salary_yrjb_eda.png)
+![Year Job Salary](https://github.com/unit-00/data-professionals/blob/master/images/salary_yrjb_eda.png)
 
 ### Hours of Working Per Week
 ---
-![Hours of Working Salary](https://github.com/unit-00/data-professional/blob/master/images/salary_hours_eda.png)
+![Hours of Working Salary](https://github.com/unit-00/data-professionals/blob/master/images/salary_hours_eda.png)
 
 ### Other People On Your Team
 ---
-![Salary With People On Your Team](https://github.com/unit-00/data-professional/blob/master/images/salary_opoyt_eda.png)
+![Salary With People On Your Team](https://github.com/unit-00/data-professionals/blob/master/images/salary_opoyt_eda.png)
 
 ### Gender
 ---
-![Salary Gender](https://github.com/unit-00/data-professional/blob/master/images/salary_gender_eda.png)
+![Salary Gender](https://github.com/unit-00/data-professionals/blob/master/images/salary_gender_eda.png)
 
 ### Top Database 
 ---
-![Salary Database](https://github.com/unit-00/data-professional/blob/master/images/salary_db_eda.png)
+![Salary Database](https://github.com/unit-00/data-professionals/blob/master/images/salary_db_eda.png)
 
 
 ## Testing
