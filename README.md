@@ -43,14 +43,14 @@ For this analysis, I focused on the difference of annual salary between three gr
 This particular write up will dive deeper into the features that I looked at that might influence the salary.
 
 Features such as
-- States
-- Education
-- Years With The Database
-- Years With This Type of Job
-- Amount of Other People On The Team
-- Hours Worked Per Week
-- Employment Sector
-- Gender
+- [States](https://github.com/unit-00/data-professionals#top-5-states)
+- [Education](https://github.com/unit-00/data-professionals#education)
+- [Years With The Database](https://github.com/unit-00/data-professionals#years-with-database)
+- [Years With This Type of Job](https://github.com/unit-00/data-professionals#years-with-this-type-of-job)
+- [Hours Worked Per Week](https://github.com/unit-00/data-professionals#hours-of-working-per-week)
+- [Amount of Other People On The Team](https://github.com/unit-00/data-professionals#other-people-on-your-team)
+- [Gender](https://github.com/unit-00/data-professionals#gender)
+- [Top Database Usage](https://github.com/unit-00/data-professionals#top-database)
 
 The data was relatively clean. 
 - It had 2 error values of `$92.27` and `100,  000`
