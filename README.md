@@ -4,12 +4,12 @@ Min Tan
 
 
 ## Table of Contents
-- [Motivation](https://github.com/unit-00/data-professionals/blob/master/README.md#motivation)
-- [Dataset](https://github.com/unit-00/data-professionals/blob/master/README.md#dataset)
-- [Exploration](https://github.com/unit-00/data-professionals/blob/master/README.md#exploration)
-- [Testing](https://github.com/unit-00/data-professionals/blob/master/README.md#testing)
-- [Conclusion](https://github.com/unit-00/data-professionals/blob/master/README.md#conclusion)
-- [Follow Up](https://github.com/unit-00/data-professionals/blob/master/README.md#follow-up)
+- [Motivation](https://github.com/unit-00/data-professionals#motivation)
+- [Dataset](https://github.com/unit-00/data-professionals#dataset)
+- [Exploration](https://github.com/unit-00/data-professionals#exploration)
+- [Testing](https://github.com/unit-00/data-professionals#testing)
+- [Conclusion](https://github.com/unit-00/data-professionals#conclusion)
+- [Follow Up](https://github.com/unit-00/data-professionals#follow-up)
 
 
 ## Motivation
