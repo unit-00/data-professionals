@@ -4,9 +4,12 @@ Min Tan
 
 
 ## Table of Contents
-- [Motivation](https://www.github.com/unit-00/data-professional#motivation)
-- [Dataset](https://www.github.com/unit-00/data-professional#dataset)
-- [Question](https://www.github.com/unit-00/what-factors-have-a-relationship-to-wanting-to-change-jobs)
+- [Motivation](https://github.com/unit-00/data-professionals/blob/master/README.md#motivation)
+- [Dataset](https://github.com/unit-00/data-professionals/blob/master/README.md#dataset)
+- [Exploration](https://github.com/unit-00/data-professionals/blob/master/README.md#exploration)
+- [Testing](https://github.com/unit-00/data-professionals/blob/master/README.md#testing)
+- [Conclusion](https://github.com/unit-00/data-professionals/blob/master/README.md#conclusion)
+- [Follow Up](https://github.com/unit-00/data-professionals/blob/master/README.md#follow-up)
 
 
 ## Motivation
@@ -98,11 +101,82 @@ Distribution of salary, adjusted.
 ---
 ![Salary Database](https://github.com/unit-00/data-professionals/blob/master/images/salary_db_eda.png)
 
+From these charts, 
+- the `Actively Looking` group seems to have on average lower salary count than those who are `Not Looking` and `Passively Looking`. 
+- But the difference between `Not Looking` and `Passively Looking` is much subtler.  
+
+In the next section I will test it more rigorously. 
 
 ## Testing
+Difference in means
 
+|Not Looking, Passively Looking|Passively Looking, Actively Looking|Not Looking, Actively Looking|
+|---|---|---|
+|3493.82|2364.20|5858.02|
+
+We see these differences in means. From a business point of view if there does prove to be a significance, it can be worthwile to try to retain employees instead of paying to train new ones. 
+
+
+
+### Welch's Test
+---
+Under the assumption that normality would converge, Welch's correction was done here because of the difference in variance. 
+
+![nl pl Welch](https://github.com/unit-00/data-professionals/blob/master/images/null_nl_pl.png)
+
+![pl al Welch](https://github.com/unit-00/data-professionals/blob/master/images/null_pl_al.png)
+
+![nl al Welch](https://github.com/unit-00/data-professionals/blob/master/images/null_nl_al.png)
+
+We see that there is a significance in difference in means between `Not Looking` and `Looking` in general. While we fail to reject the null between `Passively Looking` and `Actively Looking`.
+
+### Power Analysis
+---
+![nl pl power](https://github.com/unit-00/data-professionals/blob/master/images/power_nl_pl.png)
+
+![pl al power](https://github.com/unit-00/data-professionals/blob/master/images/power_pl_al.png)
+
+![nl al power](https://github.com/unit-00/data-professionals/blob/master/images/power_nl_al.png)
+
+- To follow up with power analysis, we see that we can detect a change of 99% between `Not Looking` and `Passively Looking`. While there's a 87% to detect a change between `Not Looking` and `Actively Looking`. We would be confident in our analysis between these two comparisons.
+- As for `Passively Looking` and `Actively Looking`, we see that there is only a 23% chance to detect a change.
+
+### MannWhitneyU Test
+---
+A non-parametric test was done as well, to see if there is disagreement with Welch's. 
+
+The p value for the tests were 
+
+Not Looking, Passively Looking
+- 3.91e-5
+
+Passively Looking, Actively Looking
+- 0.0685
+
+Not Looking, Actively Looking
+- 0.0003
+
+
+It does seem to agree with Welch's, though the p value for `Passively Looking` and `Actively Looking` was much lower in comparison to Welch's. I believe this is because Welch's take variance into consideration while MannWhitneyU does not. Depending on the reason for the analysis, it would impact the conservativeness of the test.
+
+### Bayesian Test
+---
+To follow up with Frequentist approach, I also did Bayesian Testing.
+Since this likelihood function follows a normal distribution, I used the conjugate prior of Inverse Gamma to generate the variance for the distribution of salary. 
+
+Based on 10,000 simulated means I have found that
+
+- 100% of the samples of `Not Looking` is greater than `Passively Looking`
+- 89.47% of the samples of `Passively Looking` is greater than `Actively Looking`
+- 99.98% of the samples of `Not Looking` is greater than `Actively Looking`
+
+It's interesting that under Bayesian approach, the sample mean of `Passively Looking` is greater than `Actively Looking`. Which holds disagreement with the Frequentist approach.
+In regards to other two tests, it does seem to be that `Not Looking` has a greater sample mean than `Passively Looking` and `Actively Looking`.
 
 ## Conclusion
-
+There seems to be a difference in means between `Not Looking` and `Looking` in general. In regards to a hypothetical situation trying to lower turnover rates, it would be fair to investigate farther into whether investment into employees for long term is worthwhile.
 
 ## Follow up
+Couple next step would be to 
+- collect more data
+- automate a pipeline to repeat this analysis
